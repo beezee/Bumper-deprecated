@@ -12,7 +12,9 @@ Anyone else with similar privacy concerns can now host their own email reminder 
 
 4 - Login to www.Your-Bumper-Domain.com and follow the steps on the Configuration tab to create a cron job that checks for reminders, and a catchall email address that points to the email parser.
 
-5 - Look at the "How To Schedule Reminders" tab for how to use your BCC field to have Bumper send emails back to you at your desired time, and start using it!
+5 - Configure your time zone and email format on the Allowed Emails tab, and add any additional emails you'd like to allow access to your Bumper service.
+
+6 - Look at the "How To Schedule Reminders" tab for how to use your BCC field to have Bumper send emails back to you at your desired time, and start using it!
 
 Just for ease, I've also included the usage instructions below:
 
