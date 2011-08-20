@@ -277,7 +277,7 @@ require_once('includes/class_TimezoneSelector.php');
 		   </div>
 
               <div id="footer">
-		<p><a href="http://bumper.cc" title="Bumper">Bumper!</a></p>
+		<p><a href="http://www.bumper.cc" title="Bumper">Bumper!</a></p>
 		<!-- You can do whatever you like here -->
 	      </div>
 	      
