@@ -27,11 +27,15 @@ Date, or date-time of day.
 BCC july14@bumper.cc to have the email sent back to you on July 14th (3PM by default.)
 
 BCC september20-3pm@bumper.cc to have the email sent back to you on September 20th at 3pm.
+
+
 Day of week, or day of week-time of day.
 
 BCC thursday@bumper.cc to have the email sent back to you on Thursday (3PM by default.)
 
 BCC tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:30 AM.
+
+
 Time from now, or time from now + time of day.
 
 BCC 2weeks2days3hours5minutes to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.
