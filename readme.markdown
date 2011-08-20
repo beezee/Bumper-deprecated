@@ -42,12 +42,12 @@ BCC tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:
 
 Time from now, or time from now + time of day.
 
-BCC 2weeks2days3hours5minutes to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.
+BCC 2weeks2days3hours5minutes@bumper.cc to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.
 
-BCC 1year2days10minutes to have the email sent back to you in 1 year, 2days and 10 minutes from now.
+BCC 1year2days10minutes@bumper.cc to have the email sent back to you in 1 year, 2days and 10 minutes from now.
 
-BCC 2months8am to have the email sent back to you in 2 months at 8 am.
+BCC 2months8am@bumper.cc to have the email sent back to you in 2 months at 8 am.
 
-BCC 1week2days12pm to have the email sent back to you in 1 week and 2 days, at 12 noon.
+BCC 1week2days12pm@bumper.cc to have the email sent back to you in 1 week and 2 days, at 12 noon.
 
 Note that when combining time from now + time of day, you can use years, months, weeks and days + a time of day. Time of day replaces hours and minutes.
