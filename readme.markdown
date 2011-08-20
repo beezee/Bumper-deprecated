@@ -5,9 +5,13 @@ I loved these services when I found out about them but privacy concerns prevente
 Anyone else with similar privacy concerns can now host their own email reminder service with Bumper by following these steps:
 
 1 - Download the source and upload to the root of a domain that you will use for your Bumper app.
+
 2 - Create an empty MySQL database on your host
+
 3 - Go to www.Your-Bumper-Domain.com/setup and run the setup wizard
+
 4 - Login to www.Your-Bumper-Domain and follow the steps on the Configuration tab to create a cron job that checks for reminders, and a catchall email address that points to the email parser.
+
 5 - Look at the "How To Schedule Reminders" tab for how to use your BCC field to have Bumper send emails back to you at your desired time, and start using it!
 
 Just for ease, I've also included the usage instructions below:
