@@ -36,7 +36,7 @@
 							if (response.substr(0, 22) == 'Access denied for user') {
 								var errmsg = 'Couldn\'t connect to the database. Please check your credentials and try again.';
 								} else {
-								var errmsg = response;
+								var errmsg = 'MySQL error, please make sure the DB is empty before trying again.';
 								}
 						$('#formerrortext').text(errmsg);
 						$( "#formerror" ).dialog({
@@ -83,7 +83,7 @@
 									if (response.substr(0, 22) == 'Access denied for user') {
 											var errmsg = 'Couldn\'t connect to the database. Please check your credentials and try again.';
 											} else {
-											var errmsg = response;
+											var errmsg = 'MySQL error, please make sure the DB is empty before trying again.';
 											}
 									$('#formerrortext').text(errmsg);
 									$( "#formerror" ).dialog({
