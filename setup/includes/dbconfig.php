@@ -40,7 +40,12 @@ $result = $db->q("CREATE TABLE bumpQueue (
   body text,
   timeToSend int(11)  
 ) TYPE=MyISAM");
+$sqlver = $db->q("select @@version");
+if (substr($sqlver[0]['@@version'], 0, 1) < 5) { 
+$result = $db->q("CREATE INDEX timeToSend ON bumpQueue (timeToSend)");
+} else {
 $result = $db->q("CREATE INDEX timeToSend ON bumpQueue (timeToSend) USING BTREE");
+}
 //************************************  create config file secure it, and make sure that inbox.php is accessible
 $fp = fopen('../../includes/bumper.config', 'w');
 fwrite($fp, '<?php
