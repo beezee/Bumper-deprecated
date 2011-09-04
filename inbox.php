@@ -21,11 +21,23 @@ $Parser->setText($email);
   
 //************************************   get the email parts  
 $to = $Parser->getHeader('bcc');  
-$delivered_to = $Parser->getHeader('delivered-to');  
 $from = $Parser->getHeader('from');  
 $subject = $Parser->getHeader('subject');  
 $text = $Parser->getMessageBody('text');  
 $html = $Parser->getMessageBody('html');  
+
+if (defined('EMAIL_DOMAIN')) {
+  $to_headers = array('bcc', 'delivered-to', 'received');
+  $headers = $Parser->getHeaders();
+  foreach ($headers as $header => $value) {
+    if (is_array($value))
+      $value = join("\n", $value);
+    if (in_array($header, $to_headers) && preg_match("/(?:\s|<)(\w+@".EMAIL_DOMAIN.")(?:\s|>)/", $value, $matches)) {
+      $to = $matches[1];
+      break;
+    }
+  }
+}
 
 //************************************  check format of from address, separate email address if needed
 $fromformat = strpos($from, '<');
