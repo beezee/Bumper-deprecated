@@ -226,34 +226,32 @@ require_once('includes/class_TimezoneSelector.php');
 					<form class="TTWForm" method="post" novalidate="">           
 							   <input type="text" id="pipeScript" style="text-align:center;" value="<?php echo dirname(__FILE__).'/inbox.php'; ?>" disabled="true" required="required">
 						</form>
+					<p style="margin-left:50px; width:80%;">If you are running Bumper on a different domain than the domain where you set the catchall, be sure to update <br /> <?php echo $url.'includes/bumper.config'; ?> <br /> to set your EMAIL_DOMAIN to match the domain where you'll define the catchall script.</p>
 			</div>
 			<div class="fancy tab" id="remindersTab" style="overflow:hidden;display:none;">
 				<h2>How to Set Reminders</h2>
 					<p style="margin-left:50px; width:80%;">Bumper schedules your reminders based on the email address you use to set them.<br /><br /> 
 					For example if your catchall domain was bumper.cc, sending an email to thursday@bumper.cc would schedule Bumper to 
-					send that email back to you next Thursday. Note that Bumper reads the BCC field for this address, so you must use 
-					that field to schedule your reminder. <br /><br />
-					This also means you can reply to an email and schedule a reminder at the same
-					time.<br /><br />
-					The list below contains examples of the six different ways you can format your scheduling request when BCC'ing Bumper to set a reminder.
+					send that email back to you next Thursday.<br /><br />
+					The list below contains examples of the six different ways you can format your scheduling request when emailing Bumper to set a reminder.
 					</p>
 				<ul id="allowedEmailList" style="width:80%;list-style:none;">
 					<li class="schmancy"><span style="font-style:italic;float:right;">Date, or date-time of day.</span>
 					<br clear="all" /> <br clear="all" /> 
-					BCC july14@bumper.cc to have the email sent back to you on July 14th (3PM by default.)<br /><br />
-					BCC september20-3pm@bumper.cc to have the email sent back to you on September 20th at 3pm.
+					Email july14@bumper.cc to have the email sent back to you on July 14th (3PM by default.)<br /><br />
+					Email september20-3pm@bumper.cc to have the email sent back to you on September 20th at 3pm.
 					</li>
 					<li class="schmancy"><span style="font-style:italic;float:right;">Day of week, or day of week-time of day.</span>
 					<br clear="all" /> <br clear="all" /> 
-					BCC thursday@bumper.cc to have the email sent back to you on Thursday (3PM by default.)<br /><br />
-					BCC tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:30 AM.
+					Email thursday@bumper.cc to have the email sent back to you on Thursday (3PM by default.)<br /><br />
+					Email tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:30 AM.
 					</li>
 					<li class="schmancy"><span style="font-style:italic;float:right;">Time from now, or time from now and time of day.</span>
 					<br clear="all" /> <br clear="all" /> 
-					BCC 2weeks2days3hours5minutes@bumper.cc to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.<br /><br />
-					BCC 1year2days10minutes@bumper.cc to have the email sent back to you in 1 year, 2days and 10 minutes from now.<br /><br />
-					BCC 2months-8.45am@bumper.cc to have the email sent back to you in 2 months at 8:45 am.<br /><br />
-					BCC 1week2days-12pm@bumper.cc to have the email sent back to you in 1 week and 2 days, at 12 noon.<br /><br />
+					Email 2weeks2days3hours5minutes@bumper.cc to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.<br /><br />
+					Email 1year2days10minutes@bumper.cc to have the email sent back to you in 1 year, 2days and 10 minutes from now.<br /><br />
+					Email 2months-8.45am@bumper.cc to have the email sent back to you in 2 months at 8:45 am.<br /><br />
+					Email 1week2days-12pm@bumper.cc to have the email sent back to you in 1 week and 2 days, at 12 noon.<br /><br />
 					Note that when combining time from now + time of day, you can use years, months, weeks and days + a time of day. Time of day 
 					replaces hours and minutes.
 					</li>

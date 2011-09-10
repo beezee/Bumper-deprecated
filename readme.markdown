@@ -14,7 +14,7 @@ Anyone else with similar privacy concerns can now host their own email reminder 
 
 5 - Configure your time zone and email format on the Allowed Emails tab, and add any additional emails you'd like to allow access to your Bumper service.
 
-6 - Look at the "How To Schedule Reminders" tab for how to use your BCC field to have Bumper send emails back to you at your desired time, and start using it!
+6 - Look at the "How To Schedule Reminders" tab for how to use your to, CC, or BCC field to have Bumper send emails back to you at your desired time, and start using it!
 
 Just for ease, I've also included the usage instructions below:
 
@@ -22,34 +22,32 @@ How to Set Reminders
 
 Bumper schedules your reminders based on the email address you use to set them.
 
-For example if your catchall domain was bumper.cc, sending an email to thursday@bumper.cc would schedule Bumper to send that email back to you next Thursday. Note that Bumper reads the BCC field for this address, so you must use that field to schedule your reminder. 
+For example if your catchall domain was bumper.cc, sending an email to thursday@bumper.cc would schedule Bumper to send that email back to you next Thursday. 
 
-This also means you can reply to an email and schedule a reminder at the same time.
-
-The list below contains examples of the six different ways you can format your scheduling request when BCC'ing Bumper to set a reminder.
+The list below contains examples of the six different ways you can format your scheduling request when emailing Bumper to set a reminder.
 
 Date, or date-time of day.
 
-BCC july14@bumper.cc to have the email sent back to you on July 14th (3PM by default.)
+Email july14@bumper.cc to have the email sent back to you on July 14th (3PM by default.)
 
-BCC september20-3pm@bumper.cc to have the email sent back to you on September 20th at 3pm.
+Email september20-3pm@bumper.cc to have the email sent back to you on September 20th at 3pm.
 
 
 Day of week, or day of week-time of day.
 
-BCC thursday@bumper.cc to have the email sent back to you on Thursday (3PM by default.)
+Email thursday@bumper.cc to have the email sent back to you on Thursday (3PM by default.)
 
-BCC tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:30 AM.
+Email tuesday-9.30am@bumper.cc to have the email sent back to you on Tuesday at 9:30 AM.
 
 
 Time from now, or time from now and time of day.
 
-BCC 2weeks2days3hours5minutes@bumper.cc to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.
+Email 2weeks2days3hours5minutes@bumper.cc to have the email sent back to you in 2 weeks, 2days, 3 hours and 5 minutes from now.
 
-BCC 1year2days10minutes@bumper.cc to have the email sent back to you in 1 year, 2days and 10 minutes from now.
+Email 1year2days10minutes@bumper.cc to have the email sent back to you in 1 year, 2days and 10 minutes from now.
 
-BCC 2months-8.45am@bumper.cc to have the email sent back to you in 2 months at 8:45 am.
+Email 2months-8.45am@bumper.cc to have the email sent back to you in 2 months at 8:45 am.
 
-BCC 1week2days-12pm@bumper.cc to have the email sent back to you in 1 week and 2 days, at 12 noon.
+Email 1week2days-12pm@bumper.cc to have the email sent back to you in 1 week and 2 days, at 12 noon.
 
 Note that when combining time from now + time of day, you can use years, months, weeks and days + a time of day. Time of day replaces hours and minutes.
