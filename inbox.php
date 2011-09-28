@@ -32,8 +32,8 @@ $headers = $Parser->getHeaders();
   foreach ($headers as $header => $value) {
     if (is_array($value))
       $value = join("\n", $value);
-    if (preg_match("/(?:\s|<)(\w+@".EMAIL_DOMAIN.")(?:\s|>)/", $value, $matches)) {
-      $to = $matches[1];
+    if (preg_match("/\b[A-Za-z0-9._-]+@".EMAIL_DOMAIN."/", $value, $matches)) {
+      $to = $matches[0];
       break;
     }
   }
@@ -55,7 +55,7 @@ foreach($result as $email) :
 date_default_timezone_set($email['timeZone']);
 $emailformat = $email['emailFormat'];
 endforeach;
-$when=explode('@', $to);
+$when=explode('@', $to);		
 $hyphens = strpos($when[0], '-');
 //************************************  check # of parameters sent
 if ($hyphens == false) : 
