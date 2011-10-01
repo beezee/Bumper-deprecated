@@ -181,7 +181,7 @@ require_once('includes/class_TimezoneSelector.php');
 			<h2>Allowed Email Addresses</h2>
 				<p style="margin-left:50px;width:80%;">These are the email addresses that can schedule reminders with your installation of Bumper.</p>
 					<ul id="allowedEmailList" style="width:350px;list-style:none;">
-						<?php $db = new dbWrapper('localhost', DBUSER, DBPASS, DBNAME, true);
+						<?php $db = new dbWrapper(DBHOST, DBUSER, DBPASS, DBNAME, true);
 						$result = $db->q("SELECT * FROM allowedEmails");
 						foreach($result as $key=>$email) : ?>
 						<li class="schmancy">
@@ -261,7 +261,7 @@ require_once('includes/class_TimezoneSelector.php');
 				<h2>Reminder Queue</h2>
 				<p style="margin-left:50px;width:80%;">These are the reminders currently scheduled in your Bumper. Times are shown in timezone:<?php $tz = date_default_timezone_get(); echo $tz; ?></p>
 					<ul id="queuedBumpList" style="width:500px;list-style:none;">
-						<?php $db = new dbWrapper('localhost', DBUSER, DBPASS, DBNAME, true);
+						<?php $db = new dbWrapper(DBHOST, DBUSER, DBPASS, DBNAME, true);
 						$result = $db->q("SELECT * FROM bumpQueue ORDER BY timeToSend");
 						foreach($result as $key=>$r) : ?>
 						<li class="schmancy">

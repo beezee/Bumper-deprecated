@@ -10,7 +10,7 @@ if($log->logincheck($_SESSION['loggedin'], "logon", "password", "useremail") == 
 require_once('../includes/dbWrapper.php');
 require_once('../includes/bumper.config');
 error_reporting(0);
-$db = new dbWrapper('localhost', DBUSER, DBPASS, DBNAME, true);//************************************   remove deleted reminder from bumpQueue table
+$db = new dbWrapper(DBHOST, DBUSER, DBPASS, DBNAME, true);//************************************   remove deleted reminder from bumpQueue table
 if ($_POST['action'] == 'removeReminder') : 
 $result = $db->q("DELETE FROM bumpQueue WHERE bumpId = ?", 's', $_POST['removeBump']);
 die();

@@ -10,7 +10,7 @@ if($log->logincheck($_SESSION['loggedin'], "logon", "password", "useremail") == 
 require_once('../includes/dbWrapper.php');
 require_once('../includes/bumper.config');
 error_reporting(0);
-$db = new dbWrapper('localhost', DBUSER, DBPASS, DBNAME, true);//************************************  add new allowed email to db and set default timezone and email format
+$db = new dbWrapper(DBHOST, DBUSER, DBPASS, DBNAME, true);//************************************  add new allowed email to db and set default timezone and email format
 if ($_POST['action'] == 'addAllowedEmail') : 
 $result = $db->q("SELECT * FROM allowedEmails WHERE allowedEmail = ?", 's', $_POST['newEmail']);
 if (is_array($result) and count($result) > 0) { echo 'That email address is already on the allowed list.'; die(); }

@@ -4,7 +4,7 @@ error_reporting(0);
 
 if ($_POST['action'] == 'checkdb') : 
 //************************************  check to make sure we can connect to db and that it is empty
-$db = new dbWrapper('localhost', $_POST['dbuser'], $_POST['dbpassword'], $_POST['dbname'], true);
+$db = new dbWrapper($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpassword'], $_POST['dbname'], true);
 if (!$db or $db == '' or empty($db)) {
 echo "Couldn't connect to the database. Please check your credentials and try again.";
 die();
@@ -20,7 +20,7 @@ endif;
 
 if ($_POST['action'] == 'finishsetup') :
 //************************************  create tables
-$db = new dbWrapper('localhost', $_POST['dbuser'], $_POST['dbpassword'], $_POST['dbname'], true);
+$db = new dbWrapper($_POST['dbhost'], $_POST['dbuser'], $_POST['dbpassword'], $_POST['dbname'], true);
 $result = $db->q("CREATE TABLE logon (
   userId int(11) NOT NULL auto_increment PRIMARY KEY,
   userEmail varchar(50) NOT NULL default '',
@@ -44,6 +44,7 @@ $result = $db->q("CREATE INDEX timeToSend USING BTREE ON bumpQueue (timeToSend)"
 //************************************  create config file secure it, and make sure that inbox.php is accessible
 $fp = fopen('../../includes/bumper.config', 'w');
 fwrite($fp, '<?php
+define("DBHOST", "'.$_POST['dbhost'].'");
 define("DBNAME", "'.$_POST['dbname'].'");
 define("DBUSER", "'.$_POST['dbuser'].'");
 define("DBPASS", "'.$_POST['dbpassword'].'");

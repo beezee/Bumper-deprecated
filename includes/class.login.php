@@ -7,7 +7,7 @@ session_start();
 class logmein {
     //database setup
        //MAKE SURE TO FILL IN DATABASE INFO
-    var $hostname_logon = 'localhost';      //Database server LOCATION
+    var $hostname_logon = DBHOST;      //Database server LOCATION
     var $database_logon = DBNAME;       //Database NAME
     var $username_logon = DBUSER;       //Database USERNAME
     var $password_logon = DBPASS;       //Database PASSWORD

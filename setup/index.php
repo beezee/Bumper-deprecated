@@ -15,8 +15,16 @@
 				 return email.match(re) 
 				}
 		$(document).ready(function() {
+			$('#dbhost').click(function() {
+			    if (!$('#dbhost').hasClass('clearedOnce'))
+			    {
+				$('#dbhost').val('');
+				$('#dbhost').addClass('clearedOnce');
+			    }
+			});
+		    
 			$('#configdb').click(function () {
-				if ( $('#dbname').val() == '' || $('#dbuser').val() == '' || $('#dbpassword').val() == '') 
+				if ( $('#dbname').val() == '' || $('#dbuser').val() == '' || $('#dbpassword').val() == '' || $('#dbhost').val() == '') 
 					{ 
 					$('#formerrortext').text('All fields are required.');
 					$( "#formerror" ).dialog({
@@ -30,6 +38,7 @@
 						dbname : $('#dbname').val(),
 						dbuser : $('#dbuser').val(),
 						dbpassword : $('#dbpassword').val(),
+						dbhost : $('#dbhost').val()
 						};
 				$.post('includes/dbconfig.php', data, function(response) {
 					if (response != 'Success!') {
@@ -75,6 +84,7 @@
 						dbname : $('#dbname').val(),
 						dbuser : $('#dbuser').val(),
 						dbpassword : $('#dbpassword').val(),
+						dbhost : $('#dbhost').val(),
 						adminemail : $('#adminemail').val(),
 						adminpassword : $('#adminpassword').val(),
 						}
@@ -164,7 +174,13 @@
                </label>
                <input type="password" id="dbpassword" required="required">
           </div>
-          
+	  
+	  <div id="field-dbh-container" class="field f_100">
+               <label for="field5">
+                    Database Host
+               </label>
+               <input type="text" id="dbhost" required="required" value="localhost">
+          </div> 
           
           <div id="form-submit" class="field f_100 clearfix submit">
                <input type="button" id="configdb" value="Configure Database">

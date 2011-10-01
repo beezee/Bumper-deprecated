@@ -48,7 +48,7 @@ $fromemail = $fromsplit;
 endif;
 
 //************************************  check allowed email list and get timezone and email format if it checks out
-$db = new dbWrapper('localhost', DBUSER, DBPASS, DBNAME, true);
+$db = new dbWrapper(DBHOST, DBUSER, DBPASS, DBNAME, true);
 $result = $db->q("SELECT * FROM allowedEmails WHERE allowedEmail = ?", 's', $fromemail);
 if (is_array($result) and count($result) > 0) {
 foreach($result as $email) :
